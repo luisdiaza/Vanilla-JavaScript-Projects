@@ -10,8 +10,10 @@ loadEventListeners();//Listing all event listeners outside of function would giv
 
 //Load all event loadEventListeners
 function loadEventListeners() {
-    //Add task loadEventListeners
-    form.addEventListener("submit", addTask);
+    //Attaches event listener to form.
+    form.addEventListener("submit", addTask);//The submit event is fired when a form is submitted.
+    //attaches event listener to taskList
+    taskList.addEventListener("click", removeTask)
 }
 
 //add tasks
@@ -40,4 +42,11 @@ function addTask(e) {//If a task hasn't been entered, asks user to input one.
 
 
     e.preventDefault();//prevents the default behavior that each element has
+}
+
+//remove tasks
+function removeTask(e) {
+    if (e.target){
+        console.log(e.target);
+    }
 }
