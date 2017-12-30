@@ -46,7 +46,9 @@ function addTask(e) {//If a task hasn't been entered, asks user to input one.
 
 //remove tasks
 function removeTask(e) {
-    if (e.target){
-        console.log(e.target);
+    if (e.target.parentElement.classList.contains("delete-item")){//displays the child element that triggered the event ONLY IF its parent element contains delete-item as one of its classes
+        if(confirm("Are you sure you wish to delete this element?")){
+            e.target.parentElement.parentElement.remove();//the first parentElement brings you to the a tag. The next one brings you to the li
+        }
     }
 }
