@@ -1,7 +1,7 @@
 //Define User Interface Variables
 const form = document.querySelector(".task-form");
 const taskList = document.querySelector(".collection");
-const clearButton = document.querySelector("clear-tasks");
+const clearButton = document.querySelector(".clear-tasks");
 const filter = document.querySelector(".filter");
 const taskInput = document.querySelector(".task");
 
@@ -13,7 +13,11 @@ function loadEventListeners() {
     //Attaches event listener to form.
     form.addEventListener("submit", addTask);//The submit event is fired when a form is submitted.
     //attaches event listener to taskList
-    taskList.addEventListener("click", removeTask)
+    taskList.addEventListener("click", removeTask);
+    //attaches event listener to clear tasks button
+    clearButton.addEventListener("click", clearTasks);
+    //filter tasks event
+    filter.addEventListener("keyup", filterTasks);
 }
 
 //add tasks
@@ -51,4 +55,27 @@ function removeTask(e) {
             e.target.parentElement.parentElement.remove();//the first parentElement brings you to the a tag. The next one brings you to the li
         }
     }
+}
+
+//Clears taskList
+function clearTasks() {
+    while (taskList.firstChild) {//
+        taskList.removeChild(taskList.firstChild);
+    }
+}
+//Allows user to search for tasks
+function filterTasks(e) {
+    const text = e.target.value.toLowerCase();
+
+    document.querySelectorAll(".collection-item").forEach(
+        function(task){
+            const item = task.firstChild.textContent;//textContent property sets or returns the textual content of the specified node, and all its descendants.
+            if(item.toLowerCase().indexOf(text) != -1){ // -1 means no match
+                task.style.display = "block";
+            }
+            else{
+                task.style.display = "none";
+            }
+        }
+    );
 }
