@@ -1,10 +1,10 @@
 # **Houses multiple vanilla JavaScript projects.**
 
-- **To Do List:** A To Do List that dynamically inserts tasks into the DOM. Users are able to delete tasks entered as well as search for          them. Application persists to local storage. Uses the Materialize CSS framework.
+- **To Do List:** A To Do List that dynamically inserts tasks into the DOM. Users are able to delete tasks entered as well as search for them. Application persists to local storage. Uses the **Materialize CSS framework**.
 
-- **Loan Calculator:** An application that calculates how long it would take to repay back a loan as well as the total amount. Uses Bootstrap.
+- **Loan Calculator:** An application that calculates how long it would take to repay back a loan as well as the total amount. Uses **Bootstrap**.
 
-- **Number Guesser:** A game that asks user to guess a number between a certain range with limited guesses. Uses Skeleton CSS.  
+- **Number Guesser:** A game that asks user to guess a number between a certain range with limited guesses. Uses **Skeleton CSS**.  
 
 ## Purpose:
 
