@@ -4,6 +4,8 @@
 
 - **Loan Calculator:** An application that calculates how long it would take to repay back a loan as well as the total amount. Uses Bootstrap.
 
+- **Number Guesser:** A game that asks user to guess a number between a certain range with limited guesses. Uses Skeleton CSS.  
+
 ## Purpose:
 
 To master the language to prevent an over reliance on frameworks and libraries.
@@ -14,7 +16,7 @@ To master the language to prevent an over reliance on frameworks and libraries.
 
 **Event Delegation:** A simple technique by which we add a single event handler to a parent element in order to avoid having to add event handlers to multiple child elements.  Using event delegation, it is possible to add an event handler to an element, wait for the event to bubble up from a child element and easily determine from which element the event originated from.
 
-- **Note** For event listeners to be bounded on elements, they **MUST BE PRESENT AT PAGE LOAD.** This becomes an issue when dynamically inserting elements to DOM.
+- **Note:** For event listeners to be bounded on elements, they **MUST BE PRESENT AT PAGE LOAD.** This becomes an issue when dynamically inserting elements to DOM.
 
 **Object Oriented JavaScript:** Javascript is known as a **prototype based language**. It uses special functions called **constructor functions** to define objects and their features. Each object has a prototype object which acts as a template from which it inherits its methods and properties from. When those object instances are created, a link is made between the object instance and its prototype and the properties and methods are "accessed" by walking up the chain of prototypes.
 
