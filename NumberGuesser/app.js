@@ -10,7 +10,7 @@ GAME FUNCTION:
 //Game values
 let min = 1,
     max = 10,
-    winningNum = 2,
+    winningNum = getRandomNum(min, max),
     guessesLeft = 3;
 
 //Defined UI elements
@@ -25,13 +25,20 @@ const game = document.querySelector(".game"),
 minNum.textContent = min;
 maxNum.textContent = max;
 
+// Play again event listener
+game.addEventListener('mousedown', function(e) {
+    if(e.target.className === "play-again"){
+        window.location.reload();
+    }
+});
+
 //Listen for guess
 guessBtn.addEventListener('click', function(){
     let guess = parseInt(guessInput.value);
 
     //Makes sure number entered is within range
     if(isNaN(guess) || guess < min || guess > max){
-        setMessage(`Please enter a number between ${min} and ${max}`, 'red');
+         setMessage(`Please enter a number between ${min} and ${max}`, 'red');
     }
 
     //Check if won
@@ -78,8 +85,15 @@ function gameOver (won, msg){
     //Set message
     setMessage(msg);
 
+    // Play again
+    guessBtn.value = "Play Again";
+    guessBtn.className = 'play-again';
 }
 
+// Get Winning number
+function getRandomNum(min, max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 
 //Set message
 function setMessage(msg, color) {
