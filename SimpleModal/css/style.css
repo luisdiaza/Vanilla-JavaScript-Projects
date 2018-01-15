@@ -16,7 +16,7 @@ body {
 }
 
 .modal {
-    /*display: none;*/
+    display: none;
     position: fixed;
     z-index: 1;/* describes where in the background/foreground an element is. The higher the number, the closer it is to the screen*/
     left: 0;
