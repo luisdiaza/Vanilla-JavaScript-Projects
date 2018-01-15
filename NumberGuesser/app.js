@@ -13,7 +13,7 @@ let min = 1,
     winningNum = 2,
     guessesLeft = 3;
 
-//UI elements
+//Defined UI elements
 const game = document.querySelector(".game"),
       minNum = document.querySelector(".min-num"),
       maxNum = document.querySelector(".max-num"),
@@ -36,17 +36,50 @@ guessBtn.addEventListener('click', function(){
 
     //Check if won
     if(guess === winningNum){
-        //Disable input
-        guessInput.disabled = true;
-        //Change Border color
-        guessInput.style.borderColor = 'green';
-        //Set message
-        setMessage(`${winningNum} is correct, YOU WIN!`, 'green');
+        //Game over - won
+
+        gameOver(true, `${winningNum} is correct, YOU WIN!`);
     }
     else {
+        //Wrong number
+        guessesLeft -= 1;
 
+        if(guessesLeft === 0){
+            // Game over - lost
+
+            gameOver(false, `GAME OVER, YOU LOSE! The correct number was ${winningNum}.`);
+        }
+        else {
+            // Game continues - answer wrong
+
+            //Change Border color
+            guessInput.style.borderColor = 'red';
+
+            //Clear input
+            guessInput.value = '';
+
+            //Tell user it's the wrong number
+            setMessage(`${guess} is not correct, ${guessesLeft} guesses left.`, 'red');
+        }
     }
 });
+
+// Game over
+function gameOver (won, msg){
+    let color;
+    won ===  true ? color = 'green' : color = 'red';
+
+    //Disable input
+    guessInput.disabled = true;
+    //Change Border color
+    guessInput.style.borderColor = color;
+    //set text color
+    message.style.color = color;
+    //Set message
+    setMessage(msg);
+
+}
+
 
 //Set message
 function setMessage(msg, color) {
