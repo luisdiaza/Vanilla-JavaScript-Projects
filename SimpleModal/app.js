@@ -5,7 +5,7 @@ const closeBtn = document.querySelector('.closeBtn');
 
 // Listen for open  click
 modalBtn.addEventListener('click', openModal);
-// Listen for open  click
+// Listen for close  click
 closeBtn.addEventListener('click', closeModal);
 //Listen for click outside of modal
 window.addEventListener('click', outsideClick);
@@ -22,7 +22,7 @@ function closeModal(){
 
 //Function to close modal if user clicks outside modal container
 function outsideClick(e) {
-    if(e.target === modal) {
+    if(e.target === modal) {app
         modal.style.display = 'none';
     }
 }
