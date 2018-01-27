@@ -4,7 +4,11 @@
 
 - **Loan Calculator:** An application that calculates how long it would take to repay back a loan as well as the total amount. Uses ***Bootstrap***.
 
-- **Number Guesser:** A game that asks user to guess a number between a certain range with limited guesses. Uses ***Skeleton CSS***.  
+- **Number Guesser:** A game that asks user to guess a number between a certain range with limited guesses. Uses ***Skeleton CSS.***
+
+- **Simple Modal:**: A dialog box/popup window that is displayed on top of the current page used to get more work without having to show all the information on the main screen. These messages are not locked and you can click anywhere to dismiss the container.
+
+- **OOP Booklist**: Lets users add their collection of books using Object Oriented JS and ES6 classes. Uses ***Skeleton CSSS.***
 
 ## Purpose:
 

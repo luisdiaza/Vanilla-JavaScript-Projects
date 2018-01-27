@@ -1,5 +1,5 @@
 //Define UI elements
-const modal = document.querySelector('.simpleModal');
+const modal = document.querySelector('.modal');
 const modalBtn = document.querySelector('.modalBtn');
 const closeBtn = document.querySelector('.closeBtn');
 
@@ -22,7 +22,7 @@ function closeModal(){
 
 //Function to close modal if user clicks outside modal container
 function outsideClick(e) {
-    if(e.target === modal) {app
+    if(e.target === modal) {
         modal.style.display = 'none';
     }
 }
