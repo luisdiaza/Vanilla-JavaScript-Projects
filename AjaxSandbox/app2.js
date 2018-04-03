@@ -26,7 +26,7 @@ function loadCustomer(e) {
         </ul>
       `;
 
-      document.getElementById('customer').innerHTML = output;
+      document.getElementById('customer').innerHTML = output;//outputs to browser
     }
   }
 
